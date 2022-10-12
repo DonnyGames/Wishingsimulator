@@ -4,6 +4,8 @@ let wishEvent = document.getElementById("wishEvent");
 let characterEvent = document.getElementById("characterEvent");
 let wiseTree = document.getElementById("wise");
 var soundtree = new Audio('../amangos/audio/Wise_Mystical_Tree_music.mp3');
+var primos = 0
+var counter = document.getElementById("primos")
 
 
 
@@ -11,7 +13,10 @@ var soundtree = new Audio('../amangos/audio/Wise_Mystical_Tree_music.mp3');
 
 function startWish() {
     let characterRoll = Math.round(Math.random()* 13)
-
+    if (primos > 159) {
+        primos = primos - 160
+        counter.innerHTML = primos
+    
     if (characterRoll == 1){
     character.innerHTML = "qiqi 5⭐";
     }
@@ -50,13 +55,21 @@ function startWish() {
     }
     else if (characterRoll == 13) {
         character.innerHTML = "Lost prayers to the sacred winds 5⭐";
+    } if (primos > 160) {
+        primos = primos - 160
+        counter.innerHTML = primos
     }
+
     console.log(characterRoll)
+}
 }
 
 function startWishEvent() {
     let characterRoll = Math.round(Math.random()* 23)
-
+    if (primos > 159) {
+        primos = primos - 160
+        counter.innerHTML = primos
+    
     if (characterRoll == 1){
     characterEvent.innerHTML = "venti 5⭐";
     wiseTree.style.display = "none";
@@ -197,6 +210,9 @@ soundtree.currentTime = 0;
   
 
     }
+
+   
+}
 }
 
 window.onload = function () {
@@ -205,5 +221,12 @@ window.onload = function () {
 
 function pauze() {
     soundtree.pause()
+}
+
+
+function primoAdd() {
+    primos = primos + 1;
+    counter.innerHTML = (primos)
+    console.log(primos)
 }
 
