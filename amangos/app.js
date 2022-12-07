@@ -6,9 +6,10 @@ let wiseTree = document.getElementById("wise");
 var soundtree = new Audio('../amangos/audio/Wise_Mystical_Tree_music.mp3');
 var primos = 0
 var counter = document.getElementById("primos")
+let stardust = document.getElementById("stardust")
 
 
-
+let stardustcounter = 0
 
 
 function startWish() {
@@ -16,6 +17,8 @@ function startWish() {
     if (primos > 159) {
         primos = primos - 160
         counter.innerHTML = primos
+        stardustcounter = stardustcounter + 15;
+        stardust.innerText = stardustcounter
     
     if (characterRoll == 1){
     character.innerHTML = "qiqi 5⭐";
@@ -83,6 +86,8 @@ function startWishEvent() {
     if (primos > 159) {
         primos = primos - 160
         counter.innerHTML = primos
+        stardustcounter = stardustcounter + 15;
+        stardust.innerText = stardustcounter
     
     if (characterRoll == 1){
     characterEvent.innerHTML = "venti 5⭐";
@@ -494,5 +499,16 @@ function primoAdd() {
     primos = primos + 10;
     counter.innerHTML = (primos)
     console.log(primos)
+}
+
+
+function stardustcollecting() {
+    if (stardustcounter >= 74) {
+stardustcounter = stardustcounter  - 75;
+primos = primos + 160;
+stardust.innerText = stardustcounter;
+counter.innerHTML = primos;
+    }
+    
 }
 

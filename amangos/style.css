@@ -1,10 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+
+body {
+    background-color: black;
+    color:white;
+    font-family: "Oswald";
+    overflow: hidden;
+    user-select: none;
+   
+}
 .eventwish {
     position: relative;
     left:40rem;
-    bottom:9.6rem;
+    bottom:12.5rem;
+    border-radius:10px;
 }
 
 .wise {
     left:50rem;
+    position:absolute;
 }
+
+
+#primos {
+    border-radius: 10px;
+    margin:10px;
+    transition: 500ms ease;
+}
+
+#primos:hover {
+opacity: 0.8;
+}
+
+
+button {
+    border:none;
+    background-color:grey;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+    transition: 500ms ease;
+    padding: 7px;
+}
+
+button:hover {
+    background-color: rgb(179, 177, 177);
+    transform: scale(1.1);
+}
+
+
+.stardust{
+    position: absolute;
+    transform: scale(0.4);
+    left:12rem;
+    bottom:3rem;
+}
+
+#stardust {
+    
+    position: absolute;
+    left:25rem;
+    bottom:9rem
+}
+
+.stardustbutton {
+    position: absolute;
+    left:30rem;
+    bottom:10rem
+}
+
+
 
